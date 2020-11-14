@@ -35,7 +35,7 @@ let wrap_message ?echo message ~f =
     Monitor.try_with
       ~run:
         `Schedule
-      ~rest:`Log
+      
       f
   with
   | Ok x ->

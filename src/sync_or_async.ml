@@ -10,7 +10,7 @@ type ('a, 'b) t =
 let async_protect ~f ~finally =
   Monitor.protect
     ~run:`Schedule
-    ~rest:`Log
+    
     f
     ~finally:(fun () ->
       finally ();

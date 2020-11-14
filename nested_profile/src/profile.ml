@@ -476,7 +476,6 @@ let profile
       Monitor.protect
         ~run:
           `Schedule
-        ~rest:`Log
         f
         ~finally:(fun () ->
           record_profile ?hide_if_less_than frame;

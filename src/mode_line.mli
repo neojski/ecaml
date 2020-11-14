@@ -6,6 +6,8 @@ module Format : sig
 
   (** [(describe-variable 'mode-line-format)] *)
   val in_buffer : t Buffer_local.t
+
+  val of_value_exn : Value.t -> t
 end
 
 (** [(describe-function 'format-mode-line)]

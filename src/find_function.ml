@@ -47,7 +47,7 @@ defined in Ecaml.
                  Monitor.try_with
                    ~run:
                      `Schedule
-                   ~rest:`Log
+                   
                    do_it
                with
                | Ok result -> result

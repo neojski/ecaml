@@ -192,7 +192,7 @@ let%expect_test "raising to a try-with that has already returned" =
     try_with
       ~run:
         `Schedule
-      ~rest:`Log
+      
       (fun () ->
          upon (Ivar.read raise_error) (fun () -> raise_s [%message "raising"]);
          return ())
@@ -232,7 +232,7 @@ let%expect_test "assert_foreground" =
 let%expect_test "raise in run_outside_async" =
   let%bind result =
     Monitor.try_with_or_error
-      ~rest:`Log
+      
       (fun () ->
          Async_ecaml.Private.run_outside_async [%here] (fun () ->
            raise_s [%sexp "Hello world"]))

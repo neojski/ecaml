@@ -32,7 +32,7 @@ module Function = struct
         Deferred.Or_error.try_with
           ~run:
             `Schedule
-          ~rest:`Log
+          
           f
           ~extract_exn:true
         >>| handle_result

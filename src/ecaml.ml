@@ -284,7 +284,7 @@ module Ref = struct
     Monitor.protect
       ~run:
         `Schedule
-      ~rest:`Log
+      
       f
       ~finally:(fun () ->
         r := old;

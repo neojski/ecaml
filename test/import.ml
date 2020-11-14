@@ -118,7 +118,7 @@ let with_input (type a) string (f : unit -> a Deferred.t) : a Deferred.t =
   Unix.close r;
   Monitor.protect
     ~run:`Schedule
-    ~rest:`Log
+    
     f
     ~finally:(fun () ->
       Unix.dup2 ~src:stdin_to_restore ~dst:Unix.stdin ();

@@ -807,7 +807,7 @@ Periodically check that the execution context in which Async jobs run is
             Monitor.try_with
               ~run:
                 `Schedule
-              ~rest:`Log
+              
               (fun () ->
                  let%bind () = Clock.after (sec 0.1) in
                  let%bind () = Clock.after (sec 2.) in

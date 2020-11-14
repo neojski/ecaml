@@ -73,7 +73,6 @@ let press_and_show_prompt key_sequence =
     try_with
       ~run:
         `Schedule
-      ~rest:`Log
       (fun () -> execute_keys [ key_sequence; show_prompt_key; "C-g" ])
   with
   | Error _ -> ()
